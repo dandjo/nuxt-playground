@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>{{ data.name }}</h1>
+        <h2>{{ data.name }}</h2>
         <table>
             <tr>
                 <td>Current temperature</td>
@@ -18,7 +18,7 @@
     </div>
 </template>
 
-<style>
+<style scoped>
     table {
         color: #333;
         font-family: Helvetica, Arial, sans-serif;
