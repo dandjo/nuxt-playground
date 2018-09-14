@@ -38,8 +38,8 @@ export default {
         iso_code: null
       },
       location: {
-        latitude: null,
-        longitude: null
+        latitude: 0,
+        longitude: 0
       }
     }
   },
