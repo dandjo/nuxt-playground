@@ -3,7 +3,7 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/apollo'
   ],
-  mode: 'spa',
+  // mode: 'spa',
   axios: {
     // proxyHeaders: false
   },
