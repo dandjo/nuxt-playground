@@ -12,6 +12,18 @@
     Country: {{ country.iso_code }}
     <br>
     Location: {{ location.latitude }}, {{ location.longitude }}
+    <br>
+    <div style="width: 100%">
+      <iframe
+        :src="'https://www.openstreetmap.org/export/embed.html?bbox=' + bbox.lon1 + ',' + bbox.lat1 + ',' + bbox.lon2 + ',' + bbox.lat2 + '&layer=mapnik&marker=' + location.latitude + ',' + location.longitude"
+        width="100%"
+        height="500"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+      />
+    </div>
+    <br>
   </div>
 </template>
 
@@ -28,6 +40,17 @@ export default {
       location: {
         latitude: null,
         longitude: null
+      }
+    }
+  },
+
+  computed: {
+    bbox: function() {
+      return {
+        lat1: parseFloat(this.location.latitude) - 0.1,
+        lon1: parseFloat(this.location.longitude) - 0.1,
+        lat2: parseFloat(this.location.latitude) + 0.1,
+        lon2: parseFloat(this.location.longitude) + 0.1
       }
     }
   },
