@@ -31,6 +31,11 @@
 import gql from 'graphql-tag'
 
 export default {
+  async asyncData ({ app }) {
+    let data = await app.$axios.$get('https://ipapi.co/ip')
+    return { ipaddress: data }
+  },
+
   data () {
     return {
       ipaddress: null,
