@@ -7,7 +7,10 @@
       <br>
       or be happy with the weather in
       <nuxt-link to="/weather/vienna/today">Vienna</nuxt-link>
-      today
+      today.
+      <br>
+      We also got a nice GraphQL query to get metadata for your
+      <nuxt-link to="/ipaddress">IP address</nuxt-link>.
     </p>
     <nuxt-child/>
   </div>
