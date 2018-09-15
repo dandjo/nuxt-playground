@@ -4,6 +4,11 @@ module.exports = {
     '@nuxtjs/apollo'
   ],
   // mode: 'spa',
+  generate: {
+    routes: [
+      '/article/99'
+    ]
+  },
   axios: {
     // proxyHeaders: false
   },
