@@ -6,6 +6,7 @@ module.exports = {
   // mode: 'spa',
   generate: {
     routes: [
+      '/article/5',
       '/article/99'
     ]
   },
