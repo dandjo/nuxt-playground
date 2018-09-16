@@ -20,7 +20,7 @@
 
 <style scoped>
   table {
-    color: #333;
+    color: #333333;
     font-family: Helvetica, Arial, sans-serif;
     width: 300px;
     border-collapse: collapse;
@@ -31,20 +31,20 @@
     border: 1px solid transparent;
     padding: 5px;
     transition: all 0.3s;
-    background: #FAFAFA;
+    background: #fafafa;
   }
 
   tr:nth-child(odd) td {
-    background: #F1F1F1;
+    background: #f1f1f1;
   }
 
   tr:nth-child(even) td {
-    background: #FEFEFE;
+    background: #fefefe;
   }
 
   tr td:hover {
-    background: #666;
-    color: #FFF;
+    background: #666666;
+    color: #ffffff;
   }
 </style>
 

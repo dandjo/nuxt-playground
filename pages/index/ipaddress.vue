@@ -3,7 +3,7 @@
     <h2>Enter an IP address</h2>
     <input
       v-model="ipaddress">
-    <br>
+    <br><br>
     Country: {{ iplocation.country.iso_code }}
     <br>
     Location: {{ iplocation.location.latitude }}, {{ iplocation.location.longitude }}
