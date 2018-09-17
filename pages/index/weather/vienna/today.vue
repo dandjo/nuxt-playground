@@ -1,18 +1,18 @@
 <template>
   <div>
-    <h2>{{ data.name }}</h2>
+    <h2>{{ title }}</h2>
     <table>
       <tr>
         <td>Current temperature</td>
-        <td>{{ data.d0.t }}°C</td>
+        <td>{{ temp }}°C</td>
       </tr>
       <tr>
         <td>Maximum temperature</td>
-        <td>{{ data.d0.tmax }}°C</td>
+        <td>{{ max }}°C</td>
       </tr>
       <tr>
         <td>Minimum temperature</td>
-        <td>{{ data.d0.tmin }}°C</td>
+        <td>{{ min }}°C</td>
       </tr>
     </table>
   </div>
@@ -52,7 +52,20 @@
 export default {
   async asyncData ({ app }) {
     let data = await app.$axios.$get('https://api.kurier.at/v1/weather/austria/wien/wien')
-    return { data: data }
+    return {
+      title: data.name,
+      temp: data.d0.t,
+      min: data.d0.tmin,
+      max: data.d0.tmax
+    }
+  },
+  data () {
+    return {
+      title: null,
+      temp: null,
+      min: null,
+      max: null
+    }
   },
   fetch () {
     // The `fetch` method is used to fill the store before rendering the page

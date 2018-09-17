@@ -22,7 +22,10 @@
           </ul>
         </li>
         <li>
-          <nuxt-link to="/ipaddress">IP address</nuxt-link>
+          <nuxt-link to="/ip">IP address</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/cat">CAT content</nuxt-link>
         </li>
       </ul>
     </nav>

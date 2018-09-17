@@ -1,8 +1,5 @@
 query iplocation($ip: String!) {
   getLocation(ip: $ip) {
-    country {
-      iso_code
-    }
     location {
       latitude
       longitude

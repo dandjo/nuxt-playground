@@ -11,7 +11,8 @@ module.exports = {
     ]
   },
   axios: {
-    // proxyHeaders: false
+    proxyHeaders: false,
+    credentials: false
   },
   apollo: {
     clientConfigs: {
